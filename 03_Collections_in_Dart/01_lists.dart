@@ -75,6 +75,12 @@ void main() {
 
   // Short hand notation for doing it
   final list_b = a.where((student) => student.marks >= 30);
+  print(list_b);
+
+  // Reversing the student's list
+  // Since list_b is an iterable , we need to convert it into list
+  final rev_list_b = list_b.toList().reversed.toList();
+  print("Reversed list is : $rev_list_b");
 }
 
 class Stud {
