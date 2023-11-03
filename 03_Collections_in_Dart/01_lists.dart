@@ -32,7 +32,22 @@ void main() {
 
   // Getting student names with their class names:
   print(a);
+
   // Updating the list
+  a[0] = Stud("Sam");
+  print("After updating : $a");
+
+  // Adding new element in list
+  a.add(Stud("Ajay"));
+  print("List after adding an element : ${a}");
+
+  // Removing different elements from list
+  a.removeAt(1);
+  print("List after removing at index 1 : ${a}");
+
+  // Removing different elements from a list with specific name
+  a.removeWhere((element) => (element.name == "Krish"));
+  print("List after removing Krish : ${a}");
 }
 
 class Stud {
@@ -42,6 +57,9 @@ class Stud {
   @override
   String toString() => "$name";
 }
+
+
+
 /*
 class Student<T> {
   T name;
