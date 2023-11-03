@@ -41,6 +41,10 @@ void main() {
   a.add(Stud("Ajay"));
   print("List after adding an element : ${a}");
 
+  // Insert at particular index
+  a.insert(1, Stud("Praveen"));
+  print("List after inserting an element at index 1 : ${a}");
+
   // Removing different elements from list
   a.removeAt(1);
   print("List after removing at index 1 : ${a}");
