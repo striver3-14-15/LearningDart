@@ -11,6 +11,7 @@ void main() {
   print(a[2]);
 */
 
+/*
   List<int> marks = [10, 20, 30, 40, 50];
   print(marks);
   // Methods of basic lists
@@ -18,8 +19,30 @@ void main() {
   final student = Student("Samarth", marks);
   student.setName("Vijay Ramaswamy");
   // print(student);
+*/
+
+  // Now let's create list of students
+  List<Stud> a = [
+    Stud("Vijay"),
+    Stud("Hari"),
+    Stud("Rajiv"),
+    Stud("Rames"),
+    Stud("Krish"),
+  ];
+
+  // Getting student names with their class names:
+  print(a);
+  // Updating the list
 }
 
+class Stud {
+  final String name;
+  Stud(this.name);
+
+  @override
+  String toString() => "$name";
+}
+/*
 class Student<T> {
   T name;
   final T marks;
@@ -36,3 +59,4 @@ class Student<T> {
     Student(this.name, this.marks);
   }
 }
+*/
