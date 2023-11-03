@@ -29,12 +29,26 @@ void main() {
   Map<String, int> India = {
     "Rutu": 19,
     "Shubhman": 25,
+    "Ishan": 18,
+    "Rishab": 17,
   };
+
+  // Checking whether key is prsent or not 
+  if(India['Sanju'] is null){
+    print("Key 'Sanju' does not exist in the map");
+  }
+  // Updating the value of Sanju
+  else{
+    India['Sanju']=20;
+    print("Updated Value for Key 'Sanju': ${India['Sanju']}");
+    }
+
+
 }
 
 class Student {
+  Student(this.name, this.marks);
+
   final int marks;
   final String name;
-
-  Student(this.name, this.marks);
 }
