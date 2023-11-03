@@ -64,6 +64,14 @@ void main() {
       print(' Marks of ${i.name}: ${i.marks}');
     }
   }
+
+  // Printing list of students whose marks are greater than 30 and add them in a new list
+  var b = [];
+  for (var j in a) {
+    if (j.marks > 30) {
+      b.add(j);
+    }
+  }
 }
 
 class Stud {
