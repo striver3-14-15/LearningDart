@@ -23,26 +23,26 @@ void main() {
 
   // Now let's create list of students
   List<Stud> a = [
-    Stud("Vijay"),
-    Stud("Hari"),
-    Stud("Rajiv"),
-    Stud("Rames"),
-    Stud("Krish"),
+    Stud("Vijay", 34),
+    Stud("Hari", 45),
+    Stud("Rajiv", 46),
+    Stud("Rames", 67),
+    Stud("Krish", 77),
   ];
 
   // Getting student names with their class names:
   print(a);
 
   // Updating the list
-  a[0] = Stud("Sam");
+  a[0] = Stud("Sam", 12);
   print("After updating : $a");
 
   // Adding new element in list
-  a.add(Stud("Ajay"));
+  a.add(Stud("Ajay", 77));
   print("List after adding an element : ${a}");
 
   // Insert at particular index
-  a.insert(1, Stud("Praveen"));
+  a.insert(1, Stud("Praveen", 89));
   print("List after inserting an element at index 1 : ${a}");
 
   // Removing different elements from list
@@ -52,17 +52,29 @@ void main() {
   // Removing different elements from a list with specific name
   a.removeWhere((element) => (element.name == "Krish"));
   print("List after removing Krish : ${a}");
+
+  // -------------------------------------------------------------------------
+  print(
+      """\n-------------------------------------------------------------------------
+-------------------------------------------------------------------------""");
+
+  // Printing list of students whose marks are greater than 30
+  for (var i in a) {
+    if (i.marks > 30) {
+      print(' Marks of ${i.name}: ${i.marks}');
+    }
+  }
 }
 
 class Stud {
   final String name;
-  Stud(this.name);
+  final int marks;
+
+  Stud(this.name, this.marks);
 
   @override
   String toString() => "$name";
 }
-
-
 
 /*
 class Student<T> {
