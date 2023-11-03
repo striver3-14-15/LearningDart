@@ -62,6 +62,17 @@ void main() {
   india.remove('Ojha');
   print(india);
 
+
+  // Getting values of team india in a map with a for loop
+  for (var key in india.keys) {
+    print("$key : ${india[key]}");
+  }
+
+  // Getting values of team india in a map with a for loop
+  india.forEach(
+    (k,v) =>
+     print("$k : $v")
+    );
 }
 
 class Student {
