@@ -72,6 +72,9 @@ void main() {
       b.add(j);
     }
   }
+
+  // Short hand notation for doing it
+  final list_b = a.where((student) => student.marks >= 30);
 }
 
 class Stud {
