@@ -26,7 +26,7 @@ void main() {
   print(marks);
 
   // Playing with dynamics of Maps
-  Map<String, int> India = {
+  Map<String, int> india = {
     "Rutu": 19,
     "Shubhman": 25,
     "Ishan": 18,
@@ -34,15 +34,33 @@ void main() {
   };
 
   // Checking whether key is prsent or not 
-  if(India['Sanju'] is null){
-    print("Key 'Sanju' does not exist in the map");
+  if(india['Sanju']!=null){
+    india['Sanju']=20;
+    print("Updated Value for Key 'Sanju': ${india['Sanju']}");
   }
   // Updating the value of Sanju
   else{
-    India['Sanju']=20;
-    print("Updated Value for Key 'Sanju': ${India['Sanju']}");
+    print("Key 'Sanju' does not exist in the map");
     }
 
+
+  // Adding multiple values at a time in map
+  india.addAll({
+    "Prasidh" : 99,
+    "Akash" : 100,
+    "Saurav" : 89,
+    "Ojha" : 02,
+    "Sehvaag" : 01,
+    "Agarkar" : 92
+  });
+
+  // After adding the map will be :
+  print("\n $india");
+
+
+  // Removing a key from map
+  india.remove('Ojha');
+  print(india);
 
 }
 
