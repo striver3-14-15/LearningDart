@@ -20,4 +20,19 @@
 - This callback function will receive the result of the Future as a parameter.
 
 - Here's an example of how to use a Future in Dart
+
+```
+Future<String> fetchData() {
+  return Future.delayed(Duration(seconds: 2), () {
+    return "Data fetched successfully!";
+  });
+}
+
+void main() {
+  print("Fetching data...");
+  fetchData().then((result) {
+    print(result);
+  });
+}
+```
  */
