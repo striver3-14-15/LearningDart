@@ -33,35 +33,32 @@ void main() {
     "Rishab": 17,
   };
 
-  // Checking whether key is prsent or not 
-  if(india['Sanju']!=null){
-    india['Sanju']=20;
+  // Checking whether key is prsent or not
+  if (india['Sanju'] != null) {
+    india['Sanju'] = 20;
     print("Updated Value for Key 'Sanju': ${india['Sanju']}");
   }
   // Updating the value of Sanju
-  else{
+  else {
     print("Key 'Sanju' does not exist in the map");
-    }
-
+  }
 
   // Adding multiple values at a time in map
   india.addAll({
-    "Prasidh" : 99,
-    "Akash" : 100,
-    "Saurav" : 89,
-    "Ojha" : 02,
-    "Sehvaag" : 01,
-    "Agarkar" : 92
+    "Prasidh": 99,
+    "Akash": 100,
+    "Saurav": 89,
+    "Ojha": 02,
+    "Sehvaag": 01,
+    "Agarkar": 92
   });
 
   // After adding the map will be :
   print("\n $india");
 
-
   // Removing a key from map
   india.remove('Ojha');
   print(india);
-
 
   // Getting values of team india in a map with a for loop
   for (var key in india.keys) {
@@ -69,10 +66,7 @@ void main() {
   }
 
   // Getting values of team india in a map with a for loop
-  india.forEach(
-    (k,v) =>
-     print("$k : $v")
-    );
+  india.forEach((k, v) => print("$k : $v"));
 }
 
 class Student {
