@@ -9,3 +9,11 @@ void main() async
   print(res.body);
 
 }
+
+
+// Flutter packages are known as pluggins
+// In Dart, we have packages and libraries
+// Packages are collection of libraries
+// Libraries are collection of classes
+// Classes are collection of objects
+// Objects are collection of instances
