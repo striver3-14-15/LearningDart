@@ -1,8 +1,10 @@
 void main() async {
   // Only async function can go for await!
   print("Hey bru");
-  final res = await give_After_2_seconds();
-  give_After_2_seconds();
+  // final res = await give_After_2_seconds();
+  give_After_2_seconds().then((value) {
+    print(value);
+  });
   print("Hello Hello");
   print("Greetings Greetings");
   print("Bru Bru Bru");
@@ -17,7 +19,7 @@ void main() async {
 
 Future<String> give_After_2_seconds() async {
   return Future.delayed(Duration(milliseconds: 6000), () {
-    return "Heyy!";
+    return "Heyy! I came after 6 seconds 🌚🌝🌜🌛";
   });
 }
 
