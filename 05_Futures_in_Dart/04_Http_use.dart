@@ -15,23 +15,28 @@ void main() async
 {
   var url = Uri.https("jsonplaceholder.typicode.com",'users');  
   // print(url);
+
+  try{
+
   final res = await http.get(url);
   // print(res.bodyBytes); // Getting body bytes of response
   // print(res.body);
 
-  if (res.statusCode == 200) {
+  if (res.statusCode == 200) 
+  {
     // Check if the HTTP request was successful
     List<dynamic> data = jsonDecode(res.body);
 
-    for (var user in data) {
+    for (var user in data) 
+    {
       print("Name: ${user['name']}");
     }
-  } else {
-    print("Failed to fetch data: ${res.statusCode}");
   }
+  }catch(e){
+    print(" Exception : $e");
+  }
+
 }
-
-
 // Flutter packages are known as pluggins
 // In Dart, we have packages and libraries
 // Packages are collection of libraries
